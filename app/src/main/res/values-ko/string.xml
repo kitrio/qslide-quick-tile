@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">quicktile</string>
+    <string name="call">전화</string>
+    <string name="contact">주소록</string>
+    <string name="calc_title">계산기</string>
+    <string name="message">메시지</string>
+    <string name="calendar">달력</string>
+    <string name="video">동영상</string>
+    <string name="tv">DMB</string>
+    <string name="filemgr">파일관리자</string>
+    <string name="qwebview">q 웹뷰</string>
+</resources>

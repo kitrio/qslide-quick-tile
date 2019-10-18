@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">quicktile</string>
+    <string name="call">call</string>
+    <string name="contact">contact</string>
+    <string name="calc_title">Calculator</string>
+    <string name="message">Message</string>
+    <string name="calendar">Calendar</string>
+    <string name="video">Video</string>
+    <string name="tv">DMB</string>
+    <string name="filemgr">File Manager</string>
+    <string name="qwebview">Q Webview</string>
+</resources>
