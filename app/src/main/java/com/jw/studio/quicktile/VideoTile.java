@@ -1,17 +1,16 @@
 package com.jw.studio.quicktile;
 
-
 import android.content.ComponentName;
 import android.content.Intent;
-import android.service.quicksettings.TileService;
 import android.widget.Toast;
+import android.service.quicksettings.TileService;
 
-public class QslideTileService extends TileService {
 
+public class VideoTile extends TileService{
     @Override
     public void onClick() {
         super.onClick();
-        ComponentName componentName = new ComponentName("com.lge.filemanager","com.lge.filemanager.view.FloatingActivity");
+        ComponentName componentName = new ComponentName("com.lge.videoplayer","com.lge.videoplayer.FloatingPlayer");
         try {
             startActivityAndCollapse(getActivityIntent(componentName));
         }catch (Exception e){

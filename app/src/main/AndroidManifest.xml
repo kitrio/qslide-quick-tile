@@ -18,14 +18,28 @@
             </intent-filter>
         </activity>
         <service
+            android:enabled="true"
             android:name=".QslideTileService"
             android:label="@string/filemgr"
-            android:icon="@drawable/ic_folder_open_black_24dp"
+            android:icon="@drawable/ic_folder_black"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
         </service>
+
+        <service
+            android:enabled="true"
+            android:name=".VideoTile"
+            android:label="@string/video"
+            android:icon="@drawable/ic_video"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+
     </application>
 
 
