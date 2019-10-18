@@ -72,7 +72,16 @@
             </intent-filter>
         </service>
 
-
+        <service
+            android:enabled="true"
+            android:name=".MessageTile"
+            android:label="@string/message"
+            android:icon="@drawable/ic_message"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
     </application>
 
 
