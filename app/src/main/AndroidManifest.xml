@@ -50,6 +50,17 @@
             </intent-filter>
         </service>
 
+        <service
+            android:enabled="true"
+            android:name=".TVTile"
+            android:label="@string/tv"
+            android:icon="@drawable/ic_live_tv"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
 
 
     </application>
