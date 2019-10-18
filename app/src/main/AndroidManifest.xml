@@ -39,6 +39,18 @@
             </intent-filter>
         </service>
 
+        <service
+            android:enabled="true"
+            android:name=".PhoneTile"
+            android:label="@string/call"
+            android:icon="@drawable/ic_call"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+
 
     </application>
 
