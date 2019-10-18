@@ -10,4 +10,5 @@
     <string name="tv">DMB</string>
     <string name="filemgr">파일관리자</string>
     <string name="qwebview">q 웹뷰</string>
+    <string name="is_support">해당하는 LG 앱이 없거나, Q슬라이드 지원이 더이상 되지 않습니다.</string>
 </resources>

@@ -10,4 +10,5 @@
     <string name="tv">DMB</string>
     <string name="filemgr">File Manager</string>
     <string name="qwebview">Q Webview</string>
+    <string name="is_support">App is not installed or Q slide feature is no longer supported</string>
 </resources>
