@@ -10,7 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:excludeFromRecents="true"
+            android:configChanges="keyboard|keyboardHidden|mcc|mnc|orientation|screenSize|locale|layoutDirection|smallestScreenSize|screenLayout">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,8 +24,9 @@
             android:enabled="true"
             android:name=".QslideTileService"
             android:label="@string/filemgr"
-            android:icon="@drawable/ic_folder_black"
+            android:icon="@drawable/ic_folder"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true"/>
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
@@ -34,6 +38,7 @@
             android:label="@string/video"
             android:icon="@drawable/ic_video"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true"/>
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
@@ -45,6 +50,7 @@
             android:label="@string/call"
             android:icon="@drawable/ic_call"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true"/>
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
@@ -56,6 +62,7 @@
             android:label="@string/tv"
             android:icon="@drawable/ic_live_tv"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true"/>
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
@@ -67,6 +74,7 @@
         android:label="@string/calendar"
         android:icon="@drawable/ic_calendar"
         android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true"/>
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
@@ -78,6 +86,31 @@
             android:label="@string/message"
             android:icon="@drawable/ic_message"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true"/>
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:enabled="true"
+            android:name=".LGCalulator"
+            android:label="@string/calculator"
+            android:icon="@drawable/ic_calc"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true"/>
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:enabled="true"
+            android:name=".QwebviewTile"
+            android:label="@string/qwebview"
+            android:icon="@drawable/ic_webview"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="true"/>
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
