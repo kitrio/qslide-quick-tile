@@ -9,10 +9,10 @@ public class PhoneTile extends TileService {
     @Override
     public void onClick() {
         super.onClick();
-        ComponentName componentName = new ComponentName("com.android.contacts","com.android.contacts.activities.PeopleFloatingActivity");
+        ComponentName componentName = new ComponentName("com.android.contacts", "com.android.contacts.activities.PeopleFloatingActivity");
         try {
             startActivityAndCollapse(getActivityIntent(componentName));
-        }catch (Exception e){
+        } catch (Exception e) {
             getApplicationContext().sendBroadcast(new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS));
             Toast.makeText(this, getString(R.string.is_support), Toast.LENGTH_SHORT).show();
         }
@@ -21,12 +21,12 @@ public class PhoneTile extends TileService {
     }
 
     @Override
-    public void onTileRemoved(){
+    public void onTileRemoved() {
         super.onTileRemoved();
     }
 
     @Override
-    public void onTileAdded(){
+    public void onTileAdded() {
         super.onTileAdded();
     }
 

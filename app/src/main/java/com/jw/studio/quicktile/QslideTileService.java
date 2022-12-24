@@ -8,29 +8,6 @@ import android.widget.Toast;
 
 public class QslideTileService extends TileService {
 
-    @Override
-    public void onClick() {
-        super.onClick();
-        ComponentName componentName = new ComponentName("com.lge.filemanager","com.lge.filemanager.view.FloatingActivity");
-        try {
-            startActivityAndCollapse(getActivityIntent(componentName));
-        }catch (Exception e){
-            getApplicationContext().sendBroadcast(new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS));
-            Toast.makeText(this, getString(R.string.is_support), Toast.LENGTH_SHORT).show();
-        }
-        onStopListening();
-    }
-
-    @Override
-    public void onTileRemoved(){
-        super.onTileRemoved();
-    }
-
-    @Override
-    public void onTileAdded(){
-        super.onTileAdded();
-    }
-
     public static Intent getActivityIntent(ComponentName activity) {
         Intent intent = new Intent();
         intent.setComponent(activity);
@@ -38,5 +15,28 @@ public class QslideTileService extends TileService {
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         return intent;
+    }
+
+    @Override
+    public void onClick() {
+        super.onClick();
+        ComponentName componentName = new ComponentName("com.lge.filemanager", "com.lge.filemanager.view.FloatingActivity");
+        try {
+            startActivityAndCollapse(getActivityIntent(componentName));
+        } catch (Exception e) {
+            getApplicationContext().sendBroadcast(new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS));
+            Toast.makeText(this, getString(R.string.is_support), Toast.LENGTH_SHORT).show();
+        }
+        onStopListening();
+    }
+
+    @Override
+    public void onTileRemoved() {
+        super.onTileRemoved();
+    }
+
+    @Override
+    public void onTileAdded() {
+        super.onTileAdded();
     }
 }
