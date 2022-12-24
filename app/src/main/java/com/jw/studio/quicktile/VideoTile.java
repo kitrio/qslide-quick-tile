@@ -1,5 +1,7 @@
 package com.jw.studio.quicktile;
 
+import static com.jw.studio.quicktile.Util.getActivityIntent;
+
 import android.content.ComponentName;
 import android.content.Intent;
 import android.service.quicksettings.TileService;
@@ -7,15 +9,6 @@ import android.widget.Toast;
 
 
 public class VideoTile extends TileService {
-
-    public static Intent getActivityIntent(ComponentName activity) {
-        Intent intent = new Intent();
-        intent.setComponent(activity);
-        intent.putExtra("com.lge.app.floating.launchAsFloating", true);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        return intent;
-    }
 
     @Override
     public void onClick() {
